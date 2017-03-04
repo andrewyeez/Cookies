@@ -4,12 +4,12 @@ body{
   font-family: lato, sans-serif;
   color: #fff;
   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
-  background: linear-gradient(
-    141deg,
-    #0fb8ad 0%,
-    #1fc8db 50%,
-    #2cb5e8 75%)
-  no-repeat center center fixed;
+  background: repeating-linear-gradient(
+      to top,
+      #024d72,
+      rgba(39, 155, 208, 1) 45.8%,
+      #035d8a)
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17,4 +17,14 @@ body{
 }
 h1 {
   padding-bottom: 25px;
+}
+code {
+  background: none;
+  float: left;
+}
+#code {
+  padding: 15px;
+}
+.highlight, .highlight > #code{
+  background: yellow;
 }
