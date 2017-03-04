@@ -11,14 +11,20 @@ $( document ).ready( function () {
     // display cookies
     c.displayCookie();
     // hide the btn "Show Old Cookies"
-    $(".display").hide();
+    // $(".display").hide();
+    $("#deleteCookie-js").removeClass("highlight");
+    $("#setCookie-js").addClass("highlight");
+    $("#displayCookie-js").removeClass("highlight");
   });
   // event when a user clicks on the btn "Show Old Cookies"
   $(document).on("click", ".display", function() {
     // output current cookie
     c.displayCookie();
     // hide the btn "Show Old Cookies"
-    $(this).hide();
+    // $(this).hide();
+    $("#deleteCookie-js").removeClass("highlight");
+    $("#setCookie-js").removeClass("highlight");
+    $("#displayCookie-js").addClass("highlight");
   });
 
   // event when a user clicks on the btn "Show Old Cookies"
@@ -27,6 +33,9 @@ $( document ).ready( function () {
     c.deleteCookie();
     // output current cookie (should be undefined now)
     c.displayCookie();
+    $("#deleteCookie-js").addClass("highlight");
+    $("#setCookie-js").removeClass("highlight");
+    $("#displayCookie-js").removeClass("highlight");
   });
 
 });
