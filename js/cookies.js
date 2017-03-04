@@ -20,7 +20,7 @@ var cookies = new Object({
     var cookie = document.cookie.split('=')[1];
     console.log(cookie);
     if (cookie == null){
-      alert('No more cookies :(');
+      //alert('No more cookies :(');
     } else {
       var data = JSON.parse(cookie);
       document.getElementById('ans1').innerHTML = data.name;
