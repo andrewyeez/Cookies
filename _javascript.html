@@ -1,0 +1,68 @@
+<div class="panel-body" id="description">
+  <code id="deleteCookie-js" >
+    function deleteCookie () {
+      <br />
+      <div id="code">
+        document.cookie = "demoCookie=;expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        <br />
+        document.getElementById('ans1').innerHTML = "";
+        <br />
+        document.getElementById('ans2').innerHTML = "";
+        <br />
+        document.getElementById('ans3').innerHTML = "";
+      </div>
+    }
+  </code>
+
+  <code id="displayCookie-js">
+    function displayCookie () {
+      <br />
+      <div id="code">
+        var cookie = document.cookie.split('=')[1];
+        <br />
+        console.log(cookie);
+        <br />
+        if (cookie == null){
+          <br />
+          alert('No more cookies :(');
+          <br />
+        } else {
+          <br />
+          var data = JSON.parse(cookie);
+          <br />
+          document.getElementById('ans1').innerHTML = data.name;
+          <br />
+          document.getElementById('ans2').innerHTML = data.age;
+          <br />
+          document.getElementById('ans3').innerHTML = data.word;
+          <br />
+        }
+      </div>
+    }
+  </code>
+
+  <code id="setCookie-js">
+    function setCookie (name, age, word) {
+      <br />
+      <div id="code">
+        var today = new Date();
+        <br />
+        var oneDayExpiry = new Date(today.getTime() + 1 * 24 * 3600 * 1000);
+        <br />
+        var cExpire = "expires=" + oneDayExpiry.toGMTString();
+        <br />
+        var cookie = JSON.stringify({
+          <br />
+          name: name,
+          <br />
+          age: age,
+          <br />
+          word: word
+          <br />
+        });
+        <br />
+        document.cookie = "demoCookie=" + cookie + ";" + cExpire;
+      </div>
+    }
+  </code>
+</div>
