@@ -8,3 +8,4 @@ Download the repo and open the index.html on a browser.
 I wanted to demonstrate how cookies can be used and show an interactive web page that highlights the javascript functions that allows us to make use of cookies.
 
 # Screenshots
+![alt tag](http://i.imgur.com/ynrazM9.png)
